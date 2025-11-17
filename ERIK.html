@@ -3,52 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <title>Profil Nama Saya</title>
+
+    <style>
+        body {
+            background-color: #add8e6;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Memusatkan .container secara horizontal */
+            min-height: 100vh;
+            text-align: left; /* Default perataan teks ke kiri */
+            width: 100%; 
+        }
+
+        #kembali{
+            width: 80%; /* Sesuaikan lebar dengan .container */
+            max-width: 900px;
+            margin-top: 20px; /* Jarak atas */
+            text-align: left; /* Pastikan paragraf ini sejajar kiri */
+        }
+        
+        #kembali a {
+            color: red; /* Mengubah warna link menjadi merah */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            padding: 20px;
+            margin: 10px 0 20px 0; /* Jarak vertikal */
+            background-color: white;
+            border-radius: 8px;
+            text-align: left; /* Memastikan konten di dalam container sejajar kiri */
+        }
+
+        /* Aturan tambahan untuk H3 di dalam UL agar sejajar kiri */
+        .container ul h3 {
+            text-align: left;
+            width: 100%;
+        }
+
+        /* Styling untuk gambar profil */
+        #profil-img {
+            display: block; /* Mengubah gambar menjadi elemen block */
+            margin: 10px auto; /* Memberi margin atas/bawah 10px dan memusatkan horizontal (auto) */
+        }
+    </style>
 </head>
 <body>
-    <p><a href="index.html" style="text-decoration: none;">&larr; Kembali</a></p>
-    <h2>Profil</h2>
-    <p><strong>Nama:</strong>Erik Ferisman Sumampouw</p>
-    <img src="src/images/ERIK_1.jpg" width="200">
-    <h3>Hobi:</h3>
-    <ul>
-        <li>Mendesain dan Membuat Level Game</li>
-        <li>Merancang dan Membuat Pin Lencana</li>
-        <li>Merawat Hewan</li>
-    </ul>
-    <h3>Keahlian:</h3>
-    <ul>
-        <li>Bahasa: Python, JavaScript</li>
-        <li>Framework: React, Laravel</li>
-    </ul>
-    <h3>Aktivitas Terakhir:</h3>
-    <ul>
-
-        <li><h3>(11/11/2025) Testing Konten Kustom (Charting) untuk Step Mania</h3></li>
-        <h4> Testing chart level 09 dalam Step Mania</h4>
-        <img src="src/images/ERIK_3.png" width="800">
-        <h4> Preview chart </h4>
-        <img src="src/images/ERIK_4.png" width="800">
-        <h4> Skor</h4>
-        <img src="src/images/ERIK_5.png" width="800">
-        <h4>Detail Chart:</h4>
+    <p id="kembali"><a href="index.html">&larr; Kembali</a></p>
+    
+    <div class="container">
+        <h2>Profil</h2>
+        <p><strong>Nama:</strong>Erik Ferisman Sumampouw</p>
+        <img src="src/images/ERIK_1.jpg" width="350" id="profil-img"> <h3>Hobi:</h3>
         <ul>
-            <li>Artis: MILI</li>
-            <li>Judul Lagu: Ga1had and Scientific Witchery</li>
-            <li>Tingkat Kesulitan (Level): 9</li>
+            <li>Mendesain dan Membuat Level Game</li>
+            <li>Merancang dan Membuat Pin Lencana</li>
+            <li>Merawat Hewan</li>
         </ul>
-
-        <li><h3>(9/11/2025) Pengembangan Konten Kustom (Charting) untuk Step Mania</h3></li>
-        <img src="src/images/ERIK_2.png" width="800">
-        <p> Pembuatan step chart kustom untuk game ritme Step Mania (Personal Use). Proyek ini mencakup analisis beat dan sinkronisasi yang presisi terhadap lagu "Ga1had and Scientific Witchery". Proses "charting" ini memerlukan perhatian detail dalam penempatan not (anak panah) untuk memastikan flow sesuai dengan berbagai tingkat kesulitan.</p>
-        <h4>Detail Chart:</h4>
+        <h3>Keahlian:</h3>
         <ul>
-            <li>Artis: MILI</li>
-            <li>Judul Lagu: Ga1had and Scientific Witchery</li>
-            <li>Tingkat Kesulitan (Level): 9</li>
+            <li>Bahasa: Python, JavaScript</li>
+            <li>Framework: React, Laravel</li>
         </ul>
-    </ul>
+        <h3>Aktivitas Terakhir:</h3>
+        <ul>
 
+            <li><h3>(11/11/2025) Testing Konten Kustom (Charting) untuk Step Mania</h3></li>
+            <h4> Testing chart level 09 dalam Step Mania</h4>
+            <img src="src/images/ERIK_3.png" width="777">
+            <h4> Preview chart </h4>
+            <img src="src/images/ERIK_4.png" width="777">
+            <h4> Skor</h4>
+            <img src="src/images/ERIK_5.png" width="777">
+            <h4>Detail Chart:</h4>
+            <ul>
+                <li>Artis: MILI</li>
+                <li>Judul Lagu: Ga1had and Scientific Witchery</li>
+                <li>Tingkat Kesulitan (Level): 9</li>
+            </ul>
 
-
+            <li><h3>(9/11/2025) Pengembangan Konten Kustom (Charting) untuk Step Mania</h3></li>
+            <img src="src/images/ERIK_2.png" width="777">
+            <p> Pembuatan step chart kustom untuk game ritme Step Mania (Personal Use). Proyek ini mencakup analisis beat dan sinkronisasi yang presisi terhadap lagu "Ga1had and Scientific Witchery". Proses "charting" ini memerlukan perhatian detail dalam penempatan not (anak panah) untuk memastikan flow sesuai dengan berbagai tingkat kesulitan.</p>
+            <h4>Detail Chart:</h4>
+            <ul>
+                <li>Artis: MILI</li>
+                <li>Judul Lagu: Ga1had and Scientific Witchery</li>
+                <li>Tingkat Kesulitan (Level): 9</li>
+            </ul>
+        </ul>
+    </div>
 </body>
 </html>
