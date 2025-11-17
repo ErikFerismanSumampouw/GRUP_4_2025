@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    
+    <title>Profil Anggota - CAVELL GUNAWAN</title>
+    
+    <style>
+        /* --- Global & Font --- */
+        body {
+            /* Font profesional standar modern */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+                         Helvetica, Arial, sans-serif, "Apple Color Emoji", 
+                         "Segoe UI Emoji";
+            background-color: #121212; /* Latar belakang dark-mode utama */
+            color: #e0e0e0; /* Warna teks utama (putih gading) */
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* --- Tombol Kembali --- */
+        .back-link {
+            display: inline-block;
+            margin: 20px auto;
+            text-align: center;
+            width: 100%;
+            font-weight: 500;
+            color: #58a6ff; /* Warna aksen biru (versi dark-mode) */
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .back-link:hover {
+            color: #80bfff;
+            transform: translateY(-2px);
+        }
+
+        /* --- Kontainer Utama --- */
+        .member-profile {
+            max-width: 900px;
+            margin: 20px auto 40px auto;
+            background: #1e1e1e; /* Warna kartu (lebih terang dari body) */
+            border: 1px solid #333; /* Border abu-abu gelap */
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25); /* Bayangan lebih terlihat */
+            overflow: hidden;
+        }
+
+        /* --- Header Profil (Foto & Nama) --- */
+        .profile-header {
+            background-color: #242424; /* Background header kartu */
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #2a2a2a; /* Bingkai abu-abu gelap */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Bayangan di foto */
+            margin-right: 30px;
+        }
+
+        .profile-info {
+            text-align: left;
+        }
+
+        .profile-info h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #ffffff; /* Judul putih cerah */
+            margin: 0 0 5px 0;
+        }
+
+        .profile-info .member-role {
+            font-size: 1.3em;
+            font-weight: 500;
+            color: #58a6ff; /* Warna aksen biru */
+            margin: 0;
+        }
+
+        /* --- Konten (Hobi, Keahlian, dll) --- */
+        .profile-content {
+            padding: 40px;
+        }
+        
+        .profile-section {
+            margin-bottom: 35px;
+        }
+        
+        .profile-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .profile-section h2 {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #f0f0f0; /* Judul seksi */
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #58a6ff; /* Garis bawah aksen */
+            padding-bottom: 10px;
+        }
+
+        /* --- Styling List (Hobi, Keahlian) --- */
+        .profile-section ul {
+            list-style: none;
+            padding-left: 0;
+            line-height: 1.8;
+            font-size: 1.05em;
+            color: #adb5bd; /* Warna teks lebih soft */
+        }
+
+        .profile-section ul li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 10px;
+        }
+
+        /* Ikon "check" untuk keahlian */
+        .skills-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #3fb950; /* Warna hijau (versi dark-mode) */
+            font-weight: bold;
+        }
+        
+        /* Ikon "panah" untuk hobi */
+        .hobby-list li::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            top: -1px;
+            font-size: 1.5em;
+            color: #58a6ff; /* Warna aksen biru */
+        }
+        
+        /* --- Bagian Aktivitas --- */
+        .activity-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #e0e0e0;
+            margin-bottom: 15px;
+        }
+        
+        .activity-photo {
+            width: 100%;
+            border-radius: 8px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #444; /* Border tipis gelap */
+        }
+        
+        .activity-description {
+            font-size: 1.05em;
+            color: #adb5bd;
+            line-height: 1.7;
+        }
+        
+        .activity-details {
+            font-size: 1em;
+            list-style-type: disc;
+            padding-left: 20px;
+            color: #adb5bd;
+        }
+        
+        .activity-details li {
+            padding-left: 0;
+            margin-bottom: 5px;
+        }
+        .activity-details li::before {
+            content: none;
+        }
+
+        /* --- Responsive (Biar rapi di HP) --- */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+            .profile-photo {
+                margin-right: 0;
+                margin-bottom: 20px;
+                width: 120px;
+                height: 120px;
+            }
+            .profile-info h1 {
+                font-size: 2em;
+            }
+            .profile-info .member-role {
+                font-size: 1.1em;
+            }
+            .profile-content {
+                padding: 30px;
+            }
+            .profile-section h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+    </head>
+<body>
+
+    <a href="index.html" class="back-link">← Kembali ke Halaman Tim</a>
+
+    <main class="member-profile">
+
+        <header class="profile-header">
+            <img src="https://github.com/ErikFerismanSumampouw/GRUP_4_2025/blob/main/src/images/Foto_Cavell.jpg?raw=true" alt="Foto Profil" class="profile-photo">
+            
+            <div class="profile-info">
+                <h1>Cavell Gunawan</h1>
+                <p class="member-role">Back-End Developer</p>
+            </div>
+        </header>
+
+        <div class="profile-content">
+            
+            <section class="profile-section">
+                <h2>Hobi</h2>
+                <ul class="hobby-list">
+                    <li>Touring</li>
+                    <li>Gaming</li>
+                </ul>
+            </section>
+            
+            <section class="profile-section">
+                <h2>Keahlian</h2>
+                <ul class="skills-list">
+                    <li>Konfigurasi & Manajemen Big Data (HDFS, Hive, HBase)</li>
+                    <li>Pengembangan Game Seluler (Mobile) dengan Cocos Creator</li>
+                    <li>Pemrograman Berbasis Web (HTML, CSS, JavaScript)</li>
+                </ul>
+            </section>
+
+            <section class="profile-section">
+                <h2>Aktivitas Terakhir</h2>
+                <p class="activity-title">(16/11/2025) Pengembangan Sistem Pendaftaran & Absensi Event</p>   
+                <img src="https://github.com/ErikFerismanSumampouw/GRUP_4_2025/blob/main/src/images/Cavell.png?raw=true" alt="Foto Mockup Proyek di Figma" class="activity-photo" 
+                <p class="activity-description">
+                    Progres proyek telah mencapai tahap Prototyping. Mockup dan prototipe alur pengguna (user flow) untuk 3 peran utama (Admin(Panitia Pengelola), Super Admin(Developer/admin), dan Peserta) sedang difinalisasi menggunakan Figma untuk memvalidasi alur sistem sebelum masuk ke tahap pengembangan.
+                </p>                
+                <h3>Detail Kegiatan:</h3>
+                <ul class="activity-details">
+                    <!-- PERUBAHAN: Kegiatan disesuaikan -->
+                    <li>Kegiatan: Desain UI/UX & Prototyping</li>
+                    <li>Lokasi: Remote / Pengerjaan Kelompok</li>
+                    <li>Jenis Kegiatan: Proyek Teknis / Desain Sistem</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+</body>
+</html>
