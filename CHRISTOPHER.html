@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHRISTOPHER</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #be0404, #000, #A9A9A9);
+      font-family: 'Bebas Neue', sans-serif;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(to bottom, #530303 0%, #ff4d4d 40%, #530303 100%);
+      color: white;
+      text-align: center;
+      padding: 5px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      animation: wiggle 1s infinite ease-in-out;
+    }
+
+    img.profile {
+      display: block;
+      margin: 40px auto;
+      border-radius: 50%;
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border: 5px dashed #be0404;
+      box-shadow: 0 0 25px #fff0f0;
+      transform: rotate(-5deg);
+      transition: transform 0.3s;
+    }
+
+    img.profile:hover {
+      transform: rotate(5deg) scale(2);
+    }
+
+    section {
+      background: rgba(255, 255, 255, 1);
+      margin: 20px auto;
+      width: 85%;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      color: #be0404;
+      text-align: center;
+      text-shadow: 1px 1px 0 #fff;
+    }
+
+    ul {
+      font-weight: bold;
+      list-style: "->  ";
+      list-style-position: inside;
+      padding-left: 0;
+      font-size: 1.1em;
+      text-align: center;
+    }
+
+
+    .activity {
+      border: 4px dotted #c10808;
+      background: #fff0f6;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .activity img {
+      width: 50%;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 5px 5px 0 #be0404;
+    }
+
+    footer {
+      background-color: #be0404;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    .back-btn {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+
+      color: #fff;          
+      font-size: 1.5rem;
+      text-decoration: none;
+
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      letter-spacing: 1px;
+
+      background: rgba(0,0,0,0.6);
+      padding: 6px 12px;
+      border-radius: 8px;
+
+      transition: 0.2s;
+    }
+
+    .back-btn:hover {
+      background: rgba(255,255,255,1);
+      color: #000;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="back-btn">← Back</a>
+    <h1>CHRISTOPHER</h1>
+    <p>masih pemula</p>
+  </header>
+
+  <img src="src/images/chris.jpg" alt="Literally me" class="profile">
+
+  <section>
+    <h2>Hobi</h2>
+    <ul>
+      <li>UI/UX Designing</li>
+      <li>Ngopi</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Keahlian</h2>
+    <ul>
+      <li>Java & Spring Boot</li>
+      <li>HTML & CSS</li>
+      <li>Python (67 imports)</li>
+      <li>C & C++</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2> Aktivitas Terakhir</h2>
+    <div class="activity">
+      <P><strong>Tugas 3 PADS</strong></P>
+      <img src="src/images/chris2.png" alt="PADS">
+    </div>
+  </section>
+
+  <footer>
+    <p></p>
+  </footer>
+
+</body>
+</html>
